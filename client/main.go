@@ -4,7 +4,6 @@ import (
   "context"
   "log"
   "time"
-
   "google.golang.org/grpc"
   "google.golang.org/grpc/credentials/insecure"
   pb "main/proto"
