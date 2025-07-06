@@ -1,0 +1,15 @@
+[package]
+name = "client-rust"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+# bring in tonic (with transport) and prost so generated code can see ::prost
+tonic = { version = "0.13.1", features = ["transport"] }
+prost = "0.13.1"
+# prost-types only needed if you use google.protobuf.Timestamp, etc.
+# prost-types = "0.13.1"
+
+[build-dependencies]
+tonic-build = "0.13.1"
